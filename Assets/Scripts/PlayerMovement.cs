@@ -21,14 +21,13 @@ public class PlayerMovement : MonoBehaviour
         if (isPlayer1)
         {
             movement = Input.GetAxis("Vertical");
-            rb.velocity = new Vector2(0, movement * speed);
         }
         else
         {
             movement = Input.GetAxis("Vertical2");
-            rb.velocity = new Vector2(0, movement * speed);
+           
         }
-        rb.rotation = 0;
-        
+        rb.velocity = new Vector2(0, movement * speed);
+
     }
 }
