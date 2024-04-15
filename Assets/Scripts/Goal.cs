@@ -5,9 +5,7 @@ using TMPro;
 
 public class Goal : MonoBehaviour
 {
-    // Start is called before the first frame update
     private int playerScore = 0;
-
     public GameObject playerText;
 
     void Start()
@@ -15,7 +13,6 @@ public class Goal : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -26,9 +23,6 @@ public class Goal : MonoBehaviour
         if(collision.gameObject.CompareTag("Ball")) 
         {
             GameObject.Find("Ball").transform.position = new Vector2(0, 0);
-
-            // GameObject.Find("Ball").GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2,2), Random.Range(-2, 2));
-            //if()
 
             playerScore++;
             playerText.GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
