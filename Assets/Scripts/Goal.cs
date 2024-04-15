@@ -33,9 +33,9 @@ public class Goal : MonoBehaviour
                 GameObject.Find("Ball").GetComponent<LaunchBall>().speed += 1;
             }
             
-
            
         }
+        
         
 
     }
