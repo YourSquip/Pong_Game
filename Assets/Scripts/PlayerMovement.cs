@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
             movement = Input.GetAxis("Vertical2");
            
         }
-        rb.velocity = new Vector2(0, movement * speed);
+        rb.velocity = new Vector2(rb.velocity.x, movement * speed);
 
     }
 }

@@ -22,7 +22,7 @@ public class LaunchBall : MonoBehaviour
     }
 
     
-    void Launch()
+    public void Launch()
     {
         
         //rb.velocity = new Vector2(speed * Random.Range(-2, 2), speed * Random.Range(-2, 2));
@@ -30,4 +30,6 @@ public class LaunchBall : MonoBehaviour
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
         rb.velocity = new Vector2(speed * x, speed * y);
     }
+
+    
 }
