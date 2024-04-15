@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Goal : MonoBehaviour
 {
     // Start is called before the first frame update
+    private int playerScore = 0;
 
-    bool isPlayer1Goal;
+    public GameObject playerText;
+
     void Start()
     {
         
@@ -26,8 +29,20 @@ public class Goal : MonoBehaviour
 
             // GameObject.Find("Ball").GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-2,2), Random.Range(-2, 2));
             //if()
+
+            playerScore++;
+            playerText.GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
+
             GameObject.Find("Ball").GetComponent<LaunchBall>().Launch();
-            GameObject.Find("Ball").GetComponent<LaunchBall>().speed += 1;
+            if(GameObject.Find("Ball").GetComponent<LaunchBall>().speed < 12)
+            {
+                GameObject.Find("Ball").GetComponent<LaunchBall>().speed += 1;
+            }
+            
+
+           
         }
+        
+
     }
 }

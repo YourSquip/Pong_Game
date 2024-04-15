@@ -31,5 +31,10 @@ public class LaunchBall : MonoBehaviour
         rb.velocity = new Vector2(speed * x, speed * y);
     }
 
-    
+    //private void OnCollisionEnter2D(Collision collision)
+    //{
+    //    if(speed < 15) speed++;
+    //}
+
+
 }
